@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test for base.js</title>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture">
+		<div id="creator_wrapper">
+			<div class="tile_wrapper">
+				<div class="tile">
+					<h2>Image To Use</h2>
+					<input type="hidden" value="heart_for_underlay" name="image_to_use" class="selection_input" id="image_to_use"/>
+					<input type="hidden" value="underlay" name="goal_indicator_type" class="selection_input" id="goal_indicator_type"/>
+					<div class="bold">
+					Underlay <span class="informational_tooltip" id="tooltip_for_underlay_image_container"></span>
+					</div>
+					<div id="container_for_underlay_images"><span class="image_to_use"><img src="/fund_raising/images/heart_for_underlay_thumb.png" class="possible_image_to_use selected" id="possible_image_to_use_heart_for_underlay" data-image_to_use="heart_for_underlay" data-goal_indicator_type="underlay" alt="An image showing a possible base image to use"></span><span class="image_to_use"><img src="/fund_raising/images/thermometer_for_underlay_thumb.png" class="possible_image_to_use" id="possible_image_to_use_thermometer_for_underlay" data-image_to_use="thermometer_for_underlay" data-goal_indicator_type="underlay" alt="An image showing a possible base image to use"></span>
+					</div>
+					<div class="bold">
+					Overlay <span class="informational_tooltip" id="tooltip_for_overlay_image_container"></span>
+					</div>
+					<div id="container_for_overlay_images"><span class="image_to_use"><img src="/fund_raising/images/heart_thumb.png" class="possible_image_to_use" id="possible_image_to_use_heart" data-image_to_use="heart" data-goal_indicator_type="overlay" alt="An image showing a possible base image to use"></span><span class="image_to_use"><img src="/fund_raising/images/hour_glass_thumb.png" class="possible_image_to_use" id="possible_image_to_use_hour_glass" data-image_to_use="hour_glass" data-goal_indicator_type="overlay" alt="An image showing a possible base image to use"></span>
+					</div>
+				</div><div class="tile">
+					<h2>Raised and Goal Amounts</h2>
+					<table>
+						<tbody><tr>
+							<td class="align_right"><label for="raised_amount">Raised</label></td>
+							<td><input value="50" name="raised_amount" class="selection_input" id="raised_amount"/></td>
+						</tr>
+						<tr>
+							<td class="align_right"><label for="goal_amount">Goal</label></td>
+							<td><input value="100" name="goal_amount" class="selection_input" id="goal_amount"/></td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div><div class="tile_wrapper">
+				<div class="tile">
+					<div><h2>Border</h2></div>
+					<div id="border_options">
+						<input type="hidden" value="1" name="border_width" class="selection_input" id="border_width"/>
+						<div data-slider_title="Width" id="border_width_slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-max" style="width: 90%;"></div><span tabindex="0" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 10%;">Width</span></div>
+						<input type="hidden" value="black" name="border_color" class="selection_input" id="border_color"/><span style="background-color: rgb(84, 84, 84);" class="possible_border_color_to_use" id="possible_border_color_gray" data-color_to_use="gray"></span><span style="background-color: rgb(255, 0, 0);" class="possible_border_color_to_use" id="possible_border_color_red" data-color_to_use="red"></span><span style="background-color: rgb(0, 0, 255);" class="possible_border_color_to_use" id="possible_border_color_blue" data-color_to_use="blue"></span><span style="background-color: rgb(0, 255, 0);" class="possible_border_color_to_use" id="possible_border_color_green" data-color_to_use="green"></span><span style="background-color: rgb(255, 255, 0);" class="possible_border_color_to_use" id="possible_border_color_yellow" data-color_to_use="yellow"></span><span style="background-color: rgb(0, 255, 255);" class="possible_border_color_to_use" id="possible_border_color_aqua" data-color_to_use="aqua"></span><span style="background-color: rgb(255, 0, 255);" class="possible_border_color_to_use" id="possible_border_color_magenta" data-color_to_use="magenta"></span><span style="background-color: rgb(255, 255, 255);" class="possible_border_color_to_use" id="possible_border_color_white" data-color_to_use="white"></span><span style="background-color: rgb(0, 0, 0);" class="possible_border_color_to_use selected" id="possible_border_color_black" data-color_to_use="black"></span>
+					</div>
+				</div><div class="tile">
+					<h2>Indicator</h2>
+					<input type="hidden" value="80" name="goal_indicator_opacity" class="selection_input" id="goal_indicator_opacity"/>
+					<div data-slider_title="Opacity" id="goal_indicator_opacity_slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-max" style="width: 20.202%;"></div><span tabindex="0" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 79.798%;">Opacity</span></div>
+					<input type="hidden" value="red" name="goal_indicator_color" class="selection_input" id="goal_indicator_color"/><span style="background-color: rgb(84, 84, 84);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_gray" data-color_to_use="gray"></span><span style="background-color: rgb(255, 0, 0);" class="possible_goal_indicator_color_to_use selected" id="possible_goal_indicator_color_red" data-color_to_use="red"></span><span style="background-color: rgb(0, 0, 255);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_blue" data-color_to_use="blue"></span><span style="background-color: rgb(0, 255, 0);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_green" data-color_to_use="green"></span><span style="background-color: rgb(255, 255, 0);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_yellow" data-color_to_use="yellow"></span><span style="background-color: rgb(0, 255, 255);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_aqua" data-color_to_use="aqua"></span><span style="background-color: rgb(255, 0, 255);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_magenta" data-color_to_use="magenta"></span><span style="background-color: rgb(255, 255, 255);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_white" data-color_to_use="white"></span><span style="background-color: rgb(0, 0, 0);" class="possible_goal_indicator_color_to_use" id="possible_goal_indicator_color_black" data-color_to_use="black"></span>
+				</div>
+			</div>
+		</div>
+		<div class="tile">
+			<div><img alt="The image created from the users choices" id="output_image" src="#toBeFilledByJavaScript"/></div>
+			<div><input id="fund_raising_image_url"/></div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+	<script src="../../javascripts/base.js"></script>
+	<script src="./basejstest.js"></script>
+</body>
+</html>
